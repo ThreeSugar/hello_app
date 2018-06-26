@@ -1,0 +1,25 @@
+<% layout('layout') -%>
+<% include partials/nav %>
+
+<% if (messages.error) { %> 
+    <div style = "margin-top: 50px;" class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <%= messages.error %>
+    </div>
+<% } %>
+
+<% if (messages.info) { %> 
+    <div style = "margin-top: 50px;" class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <%= messages.info %>
+    </div>
+<% } %>
+
+<form style = "margin-top: 50px;" action = "/forgot" method="POST">
+    <legend>Forgot Password</legend>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" name="email" autofocus="autofocus" class="form-control"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Reset Password</button>
+</form>

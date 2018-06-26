@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% layout('layout') -%>
+<% include partials/nav %>
+
+<div style = "margin-top:100px;">
+  <% if (messages.success) { %> 
+      <div style = "margin-top: 50px;" class="alert alert-danger alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <%= messages.success %>
+      </div>
+  <% } %>
+  Welcome to my website.
+  <a href = '/items'>Link to items</a>
+  <br>
+  <a href = '/forgot'>Link to reset password</a>
+</div>
+  
