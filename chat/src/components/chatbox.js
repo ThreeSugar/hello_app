@@ -19,7 +19,8 @@ export default class ChatBox extends Component {
     keyPress(e){
         if(e.keyCode == 13 && this.state.value != ''){
             this.socket.emit('SEND_MESSAGE', {
-                message:  {message: this.state.value}  
+                message:  {message: this.state.value,
+                           from: this.props.users[0].username}  
             })
             this.setState({value: ''});
         }
