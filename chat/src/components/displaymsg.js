@@ -1,9 +1,32 @@
 import React, { Component } from 'react'
+import ChatBox from './chatbox';
+import io from 'socket.io-client'
 
 export default class DisplayMessage extends Component {
+	constructor(props) {
+	  super(props)
+	  this.state = {
+		 messages: []
+	  }
+	  this.socket = io('http://localhost:3001');
+	  this.socket.on('RECEIVE_MESSAGE', data => {
+		if(typeof this.state.messages == 'undefined'){
+			this.setState({messages: [data.message]})
+		} 
+		else {
+			this.setState({messages: [...this.state.messages, data.message]})
+		}
+	});
+	this.scrollToBottom = this.scrollToBottom.bind(this)
+	}
+	scrollToBottom() {
+        const {thing} = this.refs;
+        thing.scrollTop = thing.scrollHeight - thing.clientHeight;
+    }
+	
   render() {
     return (
-    <div class="content">
+    <div ref={`thing`} class="content">
 		<div class="contact-profile">
 			<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
 			<p>Harvey Specter</p>
@@ -23,39 +46,15 @@ export default class DisplayMessage extends Component {
 					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
 					<p>When you're backed against the wall, break the god damn thing down.</p>
 				</li>
-				<li class="replies">
-					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-					<p>Excuses don't win championships.</p>
-				</li>
-				<li class="sent">
+				{this.state.messages.map((message) => {
+				return <li class="sent">
 					<img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
-					<p>Oh yeah, did Michael Jordan tell you that?</p>
+					<p>{message.message}</p>
 				</li>
-				<li class="replies">
-					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-					<p>No, I told him that.</p>
-				</li>
-				<li class="replies">
-					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-					<p>What are your choices when someone puts a gun to your head?</p>
-				</li>
-				<li class="sent">
-					<img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
-					<p>What are you talking about? You do what they say or they shoot you.</p>
-				</li>
-				<li class="replies">
-					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-					<p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
-				</li>
+				})}
 			</ul>
 		</div>
-		<div class="message-input">
-			<div class="wrap">
-			<input type="text" placeholder="Write your message..." />
-			<i class="fa fa-paperclip attachment" aria-hidden="true"></i>
-			<button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-			</div>
-		</div>
+		<ChatBox/>
 	</div>
     )
   }

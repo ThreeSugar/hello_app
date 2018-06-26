@@ -15,6 +15,8 @@ var signupRouter = require('./routes/signup');
 var logout = require('./routes/logout');
 
 var app = express();
+var http = require('http');
+var server = http.createServer(app);
 
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('login', 'bankdb', '12345', {
@@ -115,6 +117,19 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+//setup socket.io
+server.listen(3001);
+const io = require('socket.io')(server);
+
+io.on('connection', function(client, req, res){ 
+  console.log('connection to client successful.');
+
+  client.on('SEND_MESSAGE', function(data){
+    console.log('received msg');
+    io.sockets.emit('RECEIVE_MESSAGE', data);
+  })
 });
 
 module.exports = app;
