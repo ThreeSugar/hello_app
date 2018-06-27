@@ -39,19 +39,13 @@ router.post('/forgot', function(req, res, next) {
     user.resetPasswordToken = token;
     user.resetPasswordExpires = Date.now() + 3600000; 
     user.save().then(()=>{
-      var smtpTransport = nodemailer.createTransport(nodemailer.createTransport({ 
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
+      var smtpTransport = nodemailer.createTransport({ 
+        service: 'Hotmail',
         auth: {
-            type: 'OAuth2',
-            user: 'threesugar123@gmail.com',
-            clientId: '910744638669-3un71goo8rgb2mkherd09gje651j3u4r.apps.googleusercontent.com',
-            clientSecret: '03WvaD835rMlm0-BL42TrEhu',
-            refreshToken: '1/gFBjgFRldN6A_gkoEqeNZ1bHinG49kJ4sxta_jgh69E',
-            accessToken: 'ya29.GlvmBdSFrkIW5QVWTDuPHtwwgVS7SIZjmlqvE3dIFGsxlgPYttTrNP-rok7KB_PBKnDGmuI6Qg1VFKhK168Vv2UkvUY6ssSzqCiH3WeMMmxOs9UyJcJIyr8B_8MY',
-          }
-      }))
+          user: 'notnode794613@hotmail.com',
+          pass: 'jonsnow123'
+        }
+      })
       var mailOptions = {
         to: user.email,
         from: 'notnode794613@hotmail.com',
@@ -64,6 +58,7 @@ router.post('/forgot', function(req, res, next) {
       smtpTransport.sendMail(mailOptions, function(err, info) {
         if(err) console.log(err);
         req.flash('info', 'An e-mail has been sent to ' + user.email + ' with further instructions.');
+        res.redirect('/forgot')
       });
     })
   })
@@ -93,22 +88,16 @@ router.post('/reset/:token', function(req, res, next) {
     user.resetPasswordExpires = null;
 
     user.save().then((user)=>{
-      var smtpTransport = nodemailer.createTransport(nodemailer.createTransport({ 
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
-        auth: {
-            type: 'OAuth2',
-            user: 'threesugar123@gmail.com',
-            clientId: '910744638669-3un71goo8rgb2mkherd09gje651j3u4r.apps.googleusercontent.com',
-            clientSecret: '03WvaD835rMlm0-BL42TrEhu',
-            refreshToken: '1/gFBjgFRldN6A_gkoEqeNZ1bHinG49kJ4sxta_jgh69E',
-            accessToken: 'ya29.GlvmBdSFrkIW5QVWTDuPHtwwgVS7SIZjmlqvE3dIFGsxlgPYttTrNP-rok7KB_PBKnDGmuI6Qg1VFKhK168Vv2UkvUY6ssSzqCiH3WeMMmxOs9UyJcJIyr8B_8MY',
-          }
-      }))
+      var smtpTransport = nodemailer.createTransport({ 
+       service: 'Hotmail',
+       auth: {
+        user: 'notnode794613@hotmail.com',
+        pass: 'jonsnow123'
+       }
+      })
       var mailOptions = {
         to: user.email,
-        from: 'threesugar123@gmail.com',
+        from: 'notnode794613@hotmail.com',
         subject: 'Your password has been changed',
         text: 'Hello,\n\n' +
           'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n'
