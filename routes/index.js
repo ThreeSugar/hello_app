@@ -94,7 +94,7 @@ router.post('/reset/:token', function(req, res, next) {
     user.resetPasswordExpires = null;
 
     user.save().then((user)=>{
-      var smtpTransport = nodemailer.createTransport(nodemailer.createTransport({ 
+      var smtpTransport = nodemailer.createTransport({ 
         host: 'smtp.gmail.com',
         port: 465,
         secure: true,
@@ -106,7 +106,7 @@ router.post('/reset/:token', function(req, res, next) {
             refreshToken: '1/gFBjgFRldN6A_gkoEqeNZ1bHinG49kJ4sxta_jgh69E',
             accessToken: 'ya29.GlvmBdSFrkIW5QVWTDuPHtwwgVS7SIZjmlqvE3dIFGsxlgPYttTrNP-rok7KB_PBKnDGmuI6Qg1VFKhK168Vv2UkvUY6ssSzqCiH3WeMMmxOs9UyJcJIyr8B_8MY',
           }
-      }))
+      })
       var mailOptions = {
         to: user.email,
         from: 'threesugar123@gmail.com',
