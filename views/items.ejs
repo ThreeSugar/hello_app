@@ -1,0 +1,32 @@
+<% layout('layout') -%>
+<% include partials/nav %>
+
+<div style = "margin-top:100px;">
+  This is a test item store
+  <a href = '/items/upload'>Upload items here</a>
+</div>
+
+<div style = "margin-top:100px;">
+  <ul>
+      <li> 
+        <img style = "width: 200px; height:200px;"src = '../images/test.jpg'/>
+        Item A By Seller A
+        <a href = "#">Chat With Seller</a>
+      </li>
+
+    <% if (typeof items != "undefined") { %> 
+        <% for(i=0; i < items.length; i++) { %>
+        <li> 
+            <img style = "width: 200px; height:200px;" src = '../images/<%=items[i].item_name %>'/>
+            <%=items[i].title %> By <%=items[i].username %>
+            <%=items[i].item_desc %>
+            <% if(items[i].username != user.username) {%>
+            <%- link_to('Chat with Seller', '/items/chat/' + items[i].item_id) %>
+            <% } %> 
+            <%- link_to('Delete', '/items/delete/' + items[i].item_id) %>
+        </li>
+      <br>
+      <% } %>
+    <% } %>
+  </ul>
+</div>
