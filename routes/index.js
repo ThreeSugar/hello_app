@@ -39,6 +39,7 @@ router.post('/forgot', function(req, res, next) {
     user.resetPasswordToken = token;
     user.resetPasswordExpires = Date.now() + 3600000; 
     user.save().then(()=>{
+      console.log( 'http://' + req.headers.host + '/reset/' + token);
       var smtpTransport = nodemailer.createTransport({ 
         host: 'smtp.gmail.com',
         port: 465,
