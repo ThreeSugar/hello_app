@@ -39,19 +39,20 @@ router.post('/forgot', function(req, res, next) {
     user.resetPasswordToken = token;
     user.resetPasswordExpires = Date.now() + 3600000; 
     user.save().then(()=>{
-      var smtpTransport = nodemailer.createTransport(nodemailer.createTransport({ 
+      var smtpTransport = nodemailer.createTransport({ 
         host: 'smtp.gmail.com',
         port: 465,
         secure: true,
         auth: {
             type: 'OAuth2',
             user: 'threesugar123@gmail.com',
+            password: 'lifestyle28',
             clientId: '910744638669-3un71goo8rgb2mkherd09gje651j3u4r.apps.googleusercontent.com',
             clientSecret: '03WvaD835rMlm0-BL42TrEhu',
             refreshToken: '1/gFBjgFRldN6A_gkoEqeNZ1bHinG49kJ4sxta_jgh69E',
             accessToken: 'ya29.GlvmBdSFrkIW5QVWTDuPHtwwgVS7SIZjmlqvE3dIFGsxlgPYttTrNP-rok7KB_PBKnDGmuI6Qg1VFKhK168Vv2UkvUY6ssSzqCiH3WeMMmxOs9UyJcJIyr8B_8MY',
           }
-      }))
+      })
       var mailOptions = {
         to: user.email,
         from: 'notnode794613@hotmail.com',

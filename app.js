@@ -13,6 +13,9 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var signupRouter = require('./routes/signup');
 var logout = require('./routes/logout');
+var chat = require('./routes/chat');
+var items = require('./routes/items');
+
 
 var app = express();
 var http = require('http');
@@ -100,6 +103,8 @@ app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/signup', signupRouter);
 app.use('/logout', logout);
+app.use('/chat', chat);
+app.use('/items', items);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
