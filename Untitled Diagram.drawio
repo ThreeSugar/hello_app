@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2022-11-03T13:54:28.551Z" agent="5.0 (Windows)" etag="3ROnGK_sYACK2NiFCfHE" version="20.5.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-03T14:35:34.075Z" agent="5.0 (Windows)" etag="1ndPebKWlQtHXXLSjYsS" version="20.5.1" type="github">
   <diagram id="RCf9d5CUsMZ9T4uLRsl_" name="Page-1">
     <mxGraphModel dx="2426" dy="885" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="GKFBhkDiTDTHRFN160G9-5" value="DesignExtractorManager&#xa;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="1340" y="20" width="220" height="168" as="geometry" />
+          <mxGeometry x="1890" y="90" width="220" height="168" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-6" value="- programNode : shared_ptr&lt;ProgramNode&gt;&#xa;-  dataModifier : shared_ptr&lt;DataModifier&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="GKFBhkDiTDTHRFN160G9-5" vertex="1">
           <mxGeometry y="26" width="220" height="44" as="geometry" />
@@ -17,7 +17,7 @@
           <mxGeometry y="78" width="220" height="90" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-9" value="AbstractDesignExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="690" y="34" width="210" height="140" as="geometry" />
+          <mxGeometry x="830" y="104" width="210" height="140" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-10" value="#  programNode : shared_ptr&lt;ProgramNode&gt;&#xa;#  dataModifier : shared_ptr&lt;DataModifier&gt;&#xa;#  stmtNumbers : shared_ptr&lt;StmtNumbers&gt;&#xa;&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="GKFBhkDiTDTHRFN160G9-9" vertex="1">
           <mxGeometry y="26" width="210" height="54" as="geometry" />
@@ -29,7 +29,7 @@
           <mxGeometry y="88" width="210" height="52" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-13" value="CallsRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="460" y="350" width="190" height="100" as="geometry" />
+          <mxGeometry x="1145" y="200" width="190" height="100" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-14" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="GKFBhkDiTDTHRFN160G9-13" vertex="1">
           <mxGeometry y="26" width="190" height="14" as="geometry" />
@@ -41,10 +41,10 @@
           <mxGeometry y="48" width="190" height="52" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-18" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;CallNodeExtractionInterface&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ extractCallNodesFromProcedures &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; : unordered_map&amp;lt;string, vector&amp;lt;shared_ptr&amp;lt;CallNode&amp;gt;&amp;gt;&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ extractCallStmtRelationshipsToOutput() : void&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ extractIfAndWhileNodesFromProcedures() : void &lt;/div&gt;&lt;div&gt;&amp;nbsp;+ extractCallStmtRelationshipsWithIfAndWhileToOutput() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ getModifiedVariablesFromProcedure() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ extractVariablesFromCallNodesInProceduresToList() : void&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1320" y="270" width="290" height="190" as="geometry" />
+          <mxGeometry x="1060" y="660" width="290" height="190" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-21" value="CallsTRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="690" y="360" width="190" height="100" as="geometry" />
+          <mxGeometry x="1420" y="200" width="190" height="100" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-22" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="GKFBhkDiTDTHRFN160G9-21" vertex="1">
           <mxGeometry y="26" width="190" height="14" as="geometry" />
@@ -56,7 +56,7 @@
           <mxGeometry y="48" width="190" height="52" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-26" value="FollowsRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="960" y="300" width="220" height="150" as="geometry">
+          <mxGeometry x="990" y="370" width="220" height="150" as="geometry">
             <mxRectangle x="960" y="300" width="160" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -70,7 +70,7 @@
           <mxGeometry y="88" width="220" height="62" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-38" value="FollowsTRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="880" y="510" width="300" height="150" as="geometry" />
+          <mxGeometry x="1240" y="370" width="300" height="150" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-39" value="- vector&lt;vector&lt;shared_ptr&lt;StmtNode&gt;&gt;&gt; &#xa;  listOfStmtList &#xa;- shared_ptr&lt;list&lt;vector&lt;string&gt;&gt;&gt; output&#xa;&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="GKFBhkDiTDTHRFN160G9-38" vertex="1">
           <mxGeometry y="26" width="300" height="54" as="geometry" />
@@ -82,10 +82,10 @@
           <mxGeometry y="88" width="300" height="62" as="geometry" />
         </mxCell>
         <mxCell id="SkPulRb8pB89vCI3LF6e-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ModifiesSRelationExtractor&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&amp;nbsp; - ancestors : shared_ptr&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; &lt;br&gt;&amp;nbsp; - output : shared_ptr&amp;lt;list&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt;&amp;gt; &lt;br&gt;&amp;nbsp; - ifWhileStmtNoToModifiedVarsMap : StrToSetMap &lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; + extract() : shared_ptr&amp;lt;ExtractedResult&amp;gt;&lt;br&gt;&amp;nbsp; + save() : void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; - extractorHelper(node: shared_ptr&amp;lt;ASTNode&amp;gt;) : void&lt;br&gt;&amp;nbsp; - insertCallsForModifiesS() : void&lt;br&gt;&amp;nbsp; - insertCallsInIfAndWhileForModifiesS() : void&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; - initIfAndWhileStmtNoToModifiedVarsMap() : void&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
-          <mxGeometry x="110" y="480" width="270" height="180" as="geometry" />
+          <mxGeometry x="1610" y="355" width="270" height="180" as="geometry" />
         </mxCell>
         <mxCell id="SkPulRb8pB89vCI3LF6e-8" value="ModifiesPRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="170" y="710" width="190" height="100" as="geometry" />
+          <mxGeometry x="1900" y="360" width="190" height="100" as="geometry" />
         </mxCell>
         <mxCell id="SkPulRb8pB89vCI3LF6e-9" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-8">
           <mxGeometry y="26" width="190" height="14" as="geometry" />
@@ -97,7 +97,7 @@
           <mxGeometry y="48" width="190" height="52" as="geometry" />
         </mxCell>
         <mxCell id="SkPulRb8pB89vCI3LF6e-12" value="ParentRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="420" y="600" width="190" height="100" as="geometry" />
+          <mxGeometry x="230" y="470" width="190" height="100" as="geometry" />
         </mxCell>
         <mxCell id="SkPulRb8pB89vCI3LF6e-13" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-12">
           <mxGeometry y="26" width="190" height="14" as="geometry" />
@@ -109,7 +109,7 @@
           <mxGeometry y="48" width="190" height="52" as="geometry" />
         </mxCell>
         <mxCell id="SkPulRb8pB89vCI3LF6e-16" value="ParentTRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="630" y="600" width="190" height="100" as="geometry" />
+          <mxGeometry x="440" y="470" width="190" height="100" as="geometry" />
         </mxCell>
         <mxCell id="SkPulRb8pB89vCI3LF6e-17" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-16">
           <mxGeometry y="26" width="190" height="14" as="geometry" />
@@ -121,13 +121,13 @@
           <mxGeometry y="48" width="190" height="52" as="geometry" />
         </mxCell>
         <mxCell id="SkPulRb8pB89vCI3LF6e-20" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;UsesRelationExtractor&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ output : shared_ptr&amp;lt;list&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt;&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- extractUsesSHelper(node : shared_ptr&amp;lt;ASTNode&amp;gt;,&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp; result: shared_ptr&amp;lt;list&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt;&amp;gt;  ) : unordered_set&amp;lt;string&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- initProceduresToUsedVarsMap() : void&lt;br&gt;- proceduresToUsedVarsMap() : StrToSetMap &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
-          <mxGeometry x="450" y="740" width="305" height="130" as="geometry" />
+          <mxGeometry x="640" y="310" width="305" height="130" as="geometry" />
         </mxCell>
         <mxCell id="SkPulRb8pB89vCI3LF6e-23" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;UsesSRelationExtractor&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;&lt;div&gt;&amp;nbsp;+ extract() : shared_ptr&amp;lt;ExtractedResult&amp;gt; &lt;br&gt;&amp;nbsp;+ save() : void &lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;-&amp;nbsp; mapProceduresToUsedVariables() :&amp;nbsp; unordered_map&amp;lt;string, unordered_set&amp;lt;string&amp;gt;&amp;gt; &lt;/div&gt;&lt;div&gt;&amp;nbsp;- mapIfAndWhileStmtNoToUsedVariables () : unordered_map&amp;lt;string, unordered_set&amp;lt;string&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;- insertCallsInIfAndWhileForUseS() : void&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;- insertCallsForUseS() : void&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;- extractCallStmtRelationshipsWithIfAndWhileToOutput () : void&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;- extractCallStmtRelationshipsToOutput() : void&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&amp;nbsp;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
-          <mxGeometry x="810" y="720" width="440" height="190" as="geometry" />
+          <mxGeometry x="1390" y="610" width="440" height="190" as="geometry" />
         </mxCell>
         <mxCell id="SkPulRb8pB89vCI3LF6e-24" value="UsesPRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="1250" y="560" width="190" height="100" as="geometry" />
+          <mxGeometry x="850" y="720" width="190" height="100" as="geometry" />
         </mxCell>
         <mxCell id="SkPulRb8pB89vCI3LF6e-25" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-24">
           <mxGeometry y="26" width="190" height="14" as="geometry" />
@@ -139,22 +139,118 @@
           <mxGeometry y="48" width="190" height="52" as="geometry" />
         </mxCell>
         <mxCell id="SkPulRb8pB89vCI3LF6e-28" value="NextRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="490" y="480" width="210" height="100" as="geometry" />
+          <mxGeometry x="410" y="860" width="210" height="1848" as="geometry" />
         </mxCell>
-        <mxCell id="SkPulRb8pB89vCI3LF6e-29" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+        <mxCell id="SkPulRb8pB89vCI3LF6e-40" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;UsesRelationExtractor&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ output : shared_ptr&amp;lt;list&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt;&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- extractUsesSHelper(node : shared_ptr&amp;lt;ASTNode&amp;gt;,&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp; result: shared_ptr&amp;lt;list&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt;&amp;gt;  ) : unordered_set&amp;lt;string&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- initProceduresToUsedVarsMap() : void&lt;br&gt;- proceduresToUsedVarsMap() : StrToSetMap &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="26" width="210" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-41" value="AbstractDesignExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="156" width="210" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-42" value="#  programNode : shared_ptr&lt;ProgramNode&gt;&#xa;#  dataModifier : shared_ptr&lt;DataModifier&gt;&#xa;#  stmtNumbers : shared_ptr&lt;StmtNumbers&gt;&#xa;&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-41">
+          <mxGeometry y="26" width="210" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-43" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-41">
+          <mxGeometry y="80" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-44" value="+ extract() : shared_ptr&lt;ExtractedResult&gt;&#xa;+ save() : void&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-41">
+          <mxGeometry y="88" width="210" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-45" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ParentCommonExtractor&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;# extractParentHashmap(rootPtr : shared_ptr&amp;lt;ProgramNode&amp;gt;) : &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; shared_ptr&amp;lt;map&amp;lt;int, vector&amp;lt;int&amp;gt;&amp;gt;&amp;gt; &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="296" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-46" value="ParentRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="396" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-47" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-46">
           <mxGeometry y="26" width="210" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="SkPulRb8pB89vCI3LF6e-30" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+        <mxCell id="SkPulRb8pB89vCI3LF6e-48" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-46">
           <mxGeometry y="40" width="210" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="SkPulRb8pB89vCI3LF6e-31" value="+ extract() : shared_ptr&lt;ExtractedResult&gt;&#xa;+ save() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+        <mxCell id="SkPulRb8pB89vCI3LF6e-49" value="+ extract() : shared_ptr&lt;ExtractedResult&gt;&#xa;+ save() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-46">
           <mxGeometry y="48" width="210" height="52" as="geometry" />
         </mxCell>
-        <mxCell id="SkPulRb8pB89vCI3LF6e-32" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;VariableExtractionInterface&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp; getVariablesFromExprNode(exprNode : shared_ptr&amp;lt;ExprNode&amp;gt;) &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp; : unordered_set&amp;lt;string&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getVariablesFromCondExprNode(condExprNode : shared_ptr&amp;lt;CondExprNode&amp;gt;) &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp; : unordered_set&amp;lt;string&amp;gt; &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
-          <mxGeometry x="55" y="160" width="380" height="140" as="geometry" />
+        <mxCell id="SkPulRb8pB89vCI3LF6e-50" value="ParentTRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="496" width="210" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="SkPulRb8pB89vCI3LF6e-33" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;CFGExtractionInterface&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field1: Type&lt;br&gt;+ field2: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;# generateProcCFGMap( programNode : shared_ptr&amp;lt;ProgramNode&amp;gt; , &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; stmtNumbers : shared_ptr&amp;lt;StmtNumbers&amp;gt;) &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp; : shared_ptr&amp;lt;ProcCFGMap&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
-          <mxGeometry x="480" y="188" width="330" height="142" as="geometry" />
+        <mxCell id="SkPulRb8pB89vCI3LF6e-51" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-50">
+          <mxGeometry y="26" width="210" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-52" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-50">
+          <mxGeometry y="40" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-53" value="+ extract() : shared_ptr&lt;ExtractedResult&gt;&#xa;+ save() : void&#xa;- extractParentTDFS() : void&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-50">
+          <mxGeometry y="48" width="210" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-54" value="- vector&lt;vector&lt;shared_ptr&lt;StmtNode&gt;&gt;&gt; &#xa;  listOfStmtList &#xa;- shared_ptr&lt;list&lt;vector&lt;string&gt;&gt;&gt; output&#xa;&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="596" width="210" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-55" value="CallsRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="650" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-56" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-55">
+          <mxGeometry y="26" width="210" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-57" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-55">
+          <mxGeometry y="40" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-58" value="+ extract() : shared_ptr&lt;ExtractedResult&gt;&#xa;+ save() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-55">
+          <mxGeometry y="48" width="210" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-59" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="750" width="210" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-60" value="FollowsTRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="764" width="210" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-61" value="- vector&lt;vector&lt;shared_ptr&lt;StmtNode&gt;&gt;&gt; &#xa;  listOfStmtList &#xa;- shared_ptr&lt;list&lt;vector&lt;string&gt;&gt;&gt; output&#xa;&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-60">
+          <mxGeometry y="26" width="210" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-62" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-60">
+          <mxGeometry y="80" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-63" value="+ extract() : shared_ptr&lt;ExtractedResult&gt;&#xa;+ save() : void&#xa;- extractHelper(stmtList : vector&lt;shared_ptr&lt;StmtNode&gt;&gt;) : void&#xa;- initListOfStmtList : void&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-60">
+          <mxGeometry y="88" width="210" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-64" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ModifiesSRelationExtractor&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&amp;nbsp; - ancestors : shared_ptr&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; &lt;br&gt;&amp;nbsp; - output : shared_ptr&amp;lt;list&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt;&amp;gt; &lt;br&gt;&amp;nbsp; - ifWhileStmtNoToModifiedVarsMap : StrToSetMap &lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; + extract() : shared_ptr&amp;lt;ExtractedResult&amp;gt;&lt;br&gt;&amp;nbsp; + save() : void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; - extractorHelper(node: shared_ptr&amp;lt;ASTNode&amp;gt;) : void&lt;br&gt;&amp;nbsp; - insertCallsForModifiesS() : void&lt;br&gt;&amp;nbsp; - insertCallsInIfAndWhileForModifiesS() : void&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; - initIfAndWhileStmtNoToModifiedVarsMap() : void&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="914" width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-65" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="1094" width="210" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-66" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;UsesSRelationExtractor&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;&lt;div&gt;&amp;nbsp;+ extract() : shared_ptr&amp;lt;ExtractedResult&amp;gt; &lt;br&gt;&amp;nbsp;+ save() : void &lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;-&amp;nbsp; mapProceduresToUsedVariables() :&amp;nbsp; unordered_map&amp;lt;string, unordered_set&amp;lt;string&amp;gt;&amp;gt; &lt;/div&gt;&lt;div&gt;&amp;nbsp;- mapIfAndWhileStmtNoToUsedVariables () : unordered_map&amp;lt;string, unordered_set&amp;lt;string&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;- insertCallsInIfAndWhileForUseS() : void&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;- insertCallsForUseS() : void&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;- extractCallStmtRelationshipsWithIfAndWhileToOutput () : void&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;- extractCallStmtRelationshipsToOutput() : void&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&amp;nbsp;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="1108" width="210" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-67" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;CallNodeExtractionInterface&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ extractCallNodesFromProcedures &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; : unordered_map&amp;lt;string, vector&amp;lt;shared_ptr&amp;lt;CallNode&amp;gt;&amp;gt;&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ extractCallStmtRelationshipsToOutput() : void&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ extractIfAndWhileNodesFromProcedures() : void &lt;/div&gt;&lt;div&gt;&amp;nbsp;+ extractCallStmtRelationshipsWithIfAndWhileToOutput() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ getModifiedVariablesFromProcedure() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ extractVariablesFromCallNodesInProceduresToList() : void&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="1298" width="210" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-68" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="1488" width="210" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-69" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;VariableExtractionInterface&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp; getVariablesFromExprNode(exprNode : shared_ptr&amp;lt;ExprNode&amp;gt;) &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp; : unordered_set&amp;lt;string&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getVariablesFromCondExprNode(condExprNode : shared_ptr&amp;lt;CondExprNode&amp;gt;) &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp; : unordered_set&amp;lt;string&amp;gt; &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="1502" width="210" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-70" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;CFGExtractionInterface&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;# generateProcCFGMap( programNode : shared_ptr&amp;lt;ProgramNode&amp;gt; , &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; stmtNumbers : shared_ptr&amp;lt;StmtNumbers&amp;gt;) &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp; : shared_ptr&amp;lt;ProcCFGMap&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="1642" width="210" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-29" value="&#xa; " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="1774" width="210" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-30" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="1788" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-31" value="+ extract() : shared_ptr&lt;ExtractedResult&gt;&#xa;+ save() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SkPulRb8pB89vCI3LF6e-28">
+          <mxGeometry y="1796" width="210" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-32" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;VariableExtractionInterface&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp; getVariablesFromExprNode(exprNode : shared_ptr&amp;lt;ExprNode&amp;gt;) &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp; : unordered_set&amp;lt;string&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getVariablesFromCondExprNode(condExprNode : shared_ptr&amp;lt;CondExprNode&amp;gt;) &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp; : unordered_set&amp;lt;string&amp;gt; &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="660" width="380" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-33" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;CFGExtractionInterface&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;# generateProcCFGMap( programNode : shared_ptr&amp;lt;ProgramNode&amp;gt; , &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; stmtNumbers : shared_ptr&amp;lt;StmtNumbers&amp;gt;) &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp; : shared_ptr&amp;lt;ProcCFGMap&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="850" width="320" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="SkPulRb8pB89vCI3LF6e-39" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ParentCommonExtractor&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;# extractParentHashmap(rootPtr : shared_ptr&amp;lt;ProgramNode&amp;gt;) : &lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; shared_ptr&amp;lt;map&amp;lt;int, vector&amp;lt;int&amp;gt;&amp;gt;&amp;gt; &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="320" width="290" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
