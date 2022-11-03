@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-11-03T12:48:42.590Z" agent="5.0 (Windows)" etag="eEHN-3QW1c28Ju-HoArH" version="20.5.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-03T12:51:38.631Z" agent="5.0 (Windows)" etag="8otqHyQPi1cgGrH197wM" version="20.5.1" type="github">
   <diagram id="RCf9d5CUsMZ9T4uLRsl_" name="Page-1">
     <mxGraphModel dx="1422" dy="519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
       <root>
@@ -56,7 +56,9 @@
           <mxGeometry y="48" width="190" height="52" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-26" value="FollowsRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="960" y="300" width="220" height="150" as="geometry" />
+          <mxGeometry x="960" y="300" width="220" height="150" as="geometry">
+            <mxRectangle x="960" y="300" width="160" height="30" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-27" value="- vector&lt;vector&lt;shared_ptr&lt;StmtNode&gt;&gt;&gt; &#xa;  listOfStmtList &#xa;- shared_ptr&lt;list&lt;vector&lt;string&gt;&gt;&gt; output&#xa;&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="GKFBhkDiTDTHRFN160G9-26" vertex="1">
           <mxGeometry y="26" width="220" height="54" as="geometry" />
@@ -68,7 +70,7 @@
           <mxGeometry y="88" width="220" height="62" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-38" value="FollowsTRelationExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="1050" y="500" width="300" height="150" as="geometry" />
+          <mxGeometry x="860" y="485" width="300" height="150" as="geometry" />
         </mxCell>
         <mxCell id="GKFBhkDiTDTHRFN160G9-39" value="- vector&lt;vector&lt;shared_ptr&lt;StmtNode&gt;&gt;&gt; &#xa;  listOfStmtList &#xa;- shared_ptr&lt;list&lt;vector&lt;string&gt;&gt;&gt; output&#xa;&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="GKFBhkDiTDTHRFN160G9-38" vertex="1">
           <mxGeometry y="26" width="300" height="54" as="geometry" />
@@ -79,8 +81,8 @@
         <mxCell id="GKFBhkDiTDTHRFN160G9-41" value="+ extract() : shared_ptr&lt;ExtractedResult&gt;&#xa;+ save() : void&#xa;- extractHelper(stmtList : vector&lt;shared_ptr&lt;StmtNode&gt;&gt;) : void&#xa;- initListOfStmtList : void&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="GKFBhkDiTDTHRFN160G9-38" vertex="1">
           <mxGeometry y="88" width="300" height="62" as="geometry" />
         </mxCell>
-        <mxCell id="SkPulRb8pB89vCI3LF6e-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Class&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; void extractorHelper(shared_ptr&amp;lt;ASTNode&amp;gt; node);&lt;br&gt;&amp;nbsp; void insertCallsForModifiesS();&lt;br&gt;&amp;nbsp; void insertCallsInIfAndWhileForModifiesS();&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; void initIfAndWhileStmtNoToModifiedVarsMap();&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
-          <mxGeometry x="270" y="570" width="300" height="140" as="geometry" />
+        <mxCell id="SkPulRb8pB89vCI3LF6e-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ModifiesSRelationExtractor&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&amp;nbsp; - ancestors : shared_ptr&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; &lt;br&gt;&amp;nbsp; - output : shared_ptr&amp;lt;list&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt;&amp;gt; &lt;br&gt;&amp;nbsp; - ifWhileStmtNoToModifiedVarsMap : StrToSetMap &lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; + extract() : shared_ptr&amp;lt;ExtractedResult&amp;gt;&lt;br&gt;&amp;nbsp; + save() : void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; - extractorHelper(node: shared_ptr&amp;lt;ASTNode&amp;gt;) : void&lt;br&gt;&amp;nbsp; - insertCallsForModifiesS() : void&lt;br&gt;&amp;nbsp; - insertCallsInIfAndWhileForModifiesS() : void&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; - initIfAndWhileStmtNoToModifiedVarsMap() : void&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="485" width="270" height="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
